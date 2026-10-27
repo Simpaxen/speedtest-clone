@@ -1,13 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 body {
-    background-color: #121212;
-    color: #ffffff;
+    background-color: #09090b; /* Mycket djup mörkgrå, nästan svart */
+    color: #f4f4f5; /* Benvit text för att inte blända */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,64 +17,84 @@ body {
 }
 
 .container {
-    background-color: #1e1e1e;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    background: #18181b; /* Lite ljusare mörkgrå för kortet */
+    padding: 60px 50px;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
     text-align: center;
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
+    border: 1px solid #27272a; /* Diskret ram */
 }
 
 h1 {
-    margin-bottom: 30px;
-    color: #00d2ff;
+    margin-bottom: 40px;
+    font-weight: 600;
+    font-size: 2.5rem;
+    letter-spacing: -1px;
 }
 
 #start-btn {
-    background-color: #00d2ff;
-    color: #121212;
+    background-color: #fafafa;
+    color: #09090b;
     border: none;
-    padding: 15px 40px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 50px;
+    padding: 16px 48px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 12px;
     cursor: pointer;
-    transition: transform 0.2s, background-color 0.2s;
-    margin-bottom: 40px;
+    transition: all 0.2s ease;
+    margin-bottom: 50px;
 }
 
-#start-btn:hover {
-    background-color: #3a86ff;
-    color: white;
-    transform: scale(1.05);
+#start-btn:hover:not(:disabled) {
+    background-color: #e4e4e7;
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+#start-btn:disabled {
+    background-color: #27272a;
+    color: #71717a;
+    cursor: not-allowed;
 }
 
 .results {
     display: flex;
-    justify-content: space-around;
-    gap: 20px;
+    justify-content: space-between;
+    gap: 24px;
 }
 
 .result-box {
-    background-color: #2a2a2a;
-    padding: 20px;
-    border-radius: 8px;
+    background-color: #09090b;
+    padding: 30px 20px;
+    border-radius: 16px;
     flex: 1;
+    border: 1px solid #27272a;
 }
 
 .result-box h3 {
-    font-size: 1rem;
-    color: #aaaaaa;
-    margin-bottom: 10px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #a1a1aa;
+    margin-bottom: 12px;
+    font-weight: 600;
 }
 
 .result-box p {
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 1rem;
+    color: #71717a;
+    font-weight: 400;
 }
 
 .result-box span {
-    font-size: 2rem;
-    color: #00d2ff;
+    font-size: 2.8rem;
+    color: #ffffff;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 4px;
+    letter-spacing: -1px;
+    /* En snygg fast bredd på siffrorna så layouten inte hoppar */
+    font-variant-numeric: tabular-nums; 
 }
