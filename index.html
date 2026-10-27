@@ -3,24 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Min Bredbandskoll</title>
+    <title>Speedtest-Clone</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Hastighetstest</h1>
-        <button id="start-btn">Starta mätning</button>
+        <header>
+            <h1>H A S T I G H E T S T E S T</h1>
+            <p class="subtitle">Mät din uppkoppling i realtid</p>
+        </header>
+        
+        <div class="action-area">
+            <button id="start-btn">Starta mätning</button>
+            <!-- Ny laddningsmätare (progress bar) -->
+            <div class="progress-wrapper">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+        </div>
         
         <div class="results">
-            <div class="result-box">
+            <div class="result-box" id="ping-box">
                 <h3>Ping</h3>
                 <p><span id="ping-result">--</span> ms</p>
             </div>
-            <div class="result-box">
+            <div class="result-box active" id="download-box">
                 <h3>Nedladdning</h3>
                 <p><span id="download-result">--</span> Mbit/s</p>
             </div>
-            <div class="result-box">
+            <div class="result-box" id="upload-box">
                 <h3>Uppladdning</h3>
                 <p><span id="upload-result">--</span> Mbit/s</p>
             </div>

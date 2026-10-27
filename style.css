@@ -8,8 +8,8 @@
 }
 
 body {
-    background-color: #09090b; /* Mycket djup mörkgrå, nästan svart */
-    color: #f4f4f5; /* Benvit text för att inte blända */
+    background-color: #09090b;
+    color: #f4f4f5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,14 +17,14 @@ body {
 }
 
 .container {
-    background: #18181b; /* Lite ljusare mörkgrå för kortet */
+    background: #18181b;
     padding: 60px 50px;
     border-radius: 20px;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
     text-align: center;
     width: 100%;
     max-width: 800px;
-    border: 1px solid #27272a; /* Diskret ram */
+    border: 1px solid #27272a;
 }
 
 h1 {
@@ -44,7 +44,7 @@ h1 {
     border-radius: 12px;
     cursor: pointer;
     transition: all 0.2s ease;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 #start-btn:hover:not(:disabled) {
@@ -71,6 +71,7 @@ h1 {
     border-radius: 16px;
     flex: 1;
     border: 1px solid #27272a;
+    transition: all 0.3s ease;
 }
 
 .result-box h3 {
@@ -95,6 +96,47 @@ h1 {
     display: block;
     margin-bottom: 4px;
     letter-spacing: -1px;
-    /* En snygg fast bredd på siffrorna så layouten inte hoppar */
     font-variant-numeric: tabular-nums; 
+}
+
+/* Header & Progress Bar */
+.subtitle {
+    color: #a1a1aa;
+    margin-top: -30px;
+    margin-bottom: 40px;
+}
+
+.action-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.progress-wrapper {
+    width: 100%;
+    max-width: 400px;
+    height: 6px;
+    background-color: #27272a;
+    border-radius: 10px;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.progress-wrapper.show {
+    opacity: 1;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: width 0.1s linear;
+}
+
+.result-box.active {
+    border-color: #ffffff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
 }
