@@ -1,3 +1,5 @@
+https://simpaxen.github.io/speedtest-clone/
+
 # Custom Speedtest (Övningsprojekt)
 
 Ett modernt, minimalistiskt hastighetstest för webben
