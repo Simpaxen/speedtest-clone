@@ -16,3 +16,5 @@ Nedladdningshastigheten beröknas genom att en stor fil hämtas i bakgrunden med
 Genom att läsa av filen i datablock kan applikationen kontinuerligt beräkna: `(Totala nerladdade bytes * 8) / förfluten tid i sekunder`
 vilket sedan konverteras till Mbit/s och uppdaterar gränssnittet 10 gånger i sekunden.
 
+# Tekniska begränsningar
+- Eftersom detta projekt enbart körs i frontend och mäter mot publika API:er och CDN:er (Wikimedia/httpbin) kommer de uppmätta hastigheterna inte att matcha din faktiska maxhastighet.
